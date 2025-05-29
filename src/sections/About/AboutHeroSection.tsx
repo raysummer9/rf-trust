@@ -7,10 +7,10 @@ const AboutHeroSection = () => {
         {/* Left: Text */}
         <div className="flex-1 min-w-0 md:pr-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-none text-[#00012E] mb-8">
-            We're <span className="text-[#338DF3] font-bold">experts</span> who care, and <span className="text-[#338DF3] font-bold">partners</span> who <span className="italic font-bold">show up</span>
+            We&apos;re <span className="text-[#338DF3] font-bold">experts</span> who care, and <span className="text-[#338DF3] font-bold">partners</span> who <span className="italic font-bold">show up</span>
           </h1>
           <p className="text-lg text-[#23263B] mb-8 max-w-xl">
-            Our strength is global, but our commitment is always personal. That's how we help you move forward, confidently.
+            Our strength is global, but our commitment is always personal. That&apos;s how we help you move forward, confidently.
           </p>
           <a href="/services" className="inline-block text-lg font-semibold text-[#23263B] underline underline-offset-4 decoration-[#338DF3] hover:text-[#338DF3] transition">
             Our Services

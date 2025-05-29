@@ -59,12 +59,12 @@ const CommitmentSection = () => {
             What matters to you,<br className="hidden md:block" /> drives us
           </h2>
           <div className="text-lg text-[#23263B] max-w-md md:text-right">
-            We're committed to being more than just a service provider—we're your long-term partner.
+            We&apos;re committed to being more than just a service provider—we&apos;re your long-term partner.
           </div>
         </div>
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4">
-          {cardData.map((card, i) => (
+          {cardData.map((card) => (
             <div
               key={card.title}
               className={`flex flex-col items-start ${card.bg} ${card.rounded} border border-[#D1D5DB] p-8 h-full min-h-[260px] md:min-h-[340px]`}

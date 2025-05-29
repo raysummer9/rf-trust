@@ -13,7 +13,7 @@ export default function WhoWeAreSection() {
         <div className="w-full md:w-2/3">
           <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 leading-tight">Built on Independence, Powered<br className="hidden md:block" /> by Excellence</h2>
           <p className="text-white text-lg md:text-xl mb-10 max-w-3xl">
-            With 1,100+ professionals across 24 jurisdictions, RF Trust helps private clients, asset managers, financial institutions, and businesses manage and grow their global interests. For over 45 years, we've delivered independent, first-class corporate, fiduciary, and fund services — all built on personal relationships, not just transactions. Wherever you are, our people and expertise are always within reach, ready to move your ambitions forward.
+            With 1,100+ professionals across 24 jurisdictions, RF Trust helps private clients, asset managers, financial institutions, and businesses manage and grow their global interests. For over 45 years, we&apos;ve delivered independent, first-class corporate, fiduciary, and fund services — all built on personal relationships, not just transactions. Wherever you are, our people and expertise are always within reach, ready to move your ambitions forward.
           </p>
           <a href="/about" className="inline-block text-white text-xl font-normal border-b-2 border-[#3B82F6] pb-1 hover:text-[#3B82F6] transition">Learn More About Us</a>
         </div>

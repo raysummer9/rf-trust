@@ -19,7 +19,7 @@ export default function WhyUsSection() {
           <div className="flex flex-col gap-12">
             <div>
               <h3 className="text-[#00012E] text-xl font-bold mb-2">45+ Years of Experience</h3>
-              <p className="text-[#00012E] text-base">We've spent decades helping clients navigate the complexities of global finance. Our experience means we know how to anticipate challenges — and solve them before they slow you down.</p>
+              <p className="text-[#00012E] text-base">We&apos;ve spent decades helping clients navigate the complexities of global finance. Our experience means we know how to anticipate challenges — and solve them before they slow you down.</p>
             </div>
             <div>
               <h3 className="text-[#00012E] text-xl font-bold mb-2">Industry-Specific Expertise</h3>
@@ -30,11 +30,11 @@ export default function WhyUsSection() {
           <div className="flex flex-col gap-12">
             <div>
               <h3 className="text-[#00012E] text-xl font-bold mb-2">Award-Winning Service</h3>
-              <p className="text-[#00012E] text-base">We don't just deliver — we're recognized for it. Our commitment to quality, independence, and excellence has earned us industry-leading awards and long-standing client trust.</p>
+              <p className="text-[#00012E] text-base">We don&apos;t just deliver — we&apos;re recognized for it. Our commitment to quality, independence, and excellence has earned us industry-leading awards and long-standing client trust.</p>
             </div>
             <div>
               <h3 className="text-[#00012E] text-xl font-bold mb-2">Personalized Client Relationships</h3>
-              <p className="text-[#00012E] text-base">You're never just another account number to us. We take the time to understand your goals, so we can build the right solutions — and the right partnership — for you.</p>
+              <p className="text-[#00012E] text-base">You&apos;re never just another account number to us. We take the time to understand your goals, so we can build the right solutions — and the right partnership — for you.</p>
             </div>
           </div>
         </div>

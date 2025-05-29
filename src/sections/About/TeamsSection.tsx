@@ -41,7 +41,7 @@ const TeamsSection = () => {
         </div>
         {/* Team Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full md:w-[70%] md:ml-auto">
-          {team.map((member, i) => (
+          {team.map((member) => (
             <div key={member.name} className="bg-[#F5F6FA] rounded-lg overflow-hidden shadow-sm flex flex-col">
               <div className="relative w-full h-64">
                 <Image

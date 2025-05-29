@@ -28,7 +28,7 @@ const TridentTouchSection = () => {
               Independence that puts<br />you first
             </h2>
             <p className="text-base md:text-lg text-[#181A2A]">
-              As a privately owned and independent firm, RF Trust is free from external pressures and conflicts of interest. This autonomy allows us to focus entirely on our clients' needs, providing unbiased advice and customized solutions.<br />
+              As a privately owned and independent firm, RF Trust is free from external pressures and conflicts of interest. This autonomy allows us to focus entirely on our clients&apos; needs, providing unbiased advice and customized solutions.<br />
               Our purpose is clear: to empower our clients by delivering exceptional service, fostering long-term relationships, and supporting their growth across borders.
             </p>
           </div>
@@ -38,7 +38,7 @@ const TridentTouchSection = () => {
               Our Global Presence
             </h2>
             <p className="text-base md:text-lg text-[#181A2A]">
-              With over 1,100 professionals across Africa, the Americas, Asia, the Caribbean, and Europe, RF Trust combines global reach with local expertise. Our multilingual teams bring cultural insight and deep industry knowledge, helping clients navigate complex markets with confidence. Wherever you are, we're close by and ready to move your goals forward.
+              With over 1,100 professionals across Africa, the Americas, Asia, the Caribbean, and Europe, RF Trust combines global reach with local expertise. Our multilingual teams bring cultural insight and deep industry knowledge, helping clients navigate complex markets with confidence. Wherever you are, we&apos;re close by and ready to move your goals forward.
             </p>
           </div>
           {/* Bottom Right: Globe Image */}

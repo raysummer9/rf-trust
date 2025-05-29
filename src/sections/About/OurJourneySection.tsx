@@ -1,6 +1,12 @@
 import React from 'react';
 
-const milestones = [
+interface Milestone {
+  year: string;
+  color: string;
+  desc: string;
+}
+
+const milestones: Milestone[] = [
   {
     year: '1983',
     color: 'bg-lime-300',
@@ -54,7 +60,7 @@ const OurJourneySection = () => {
           <div>
             <div className="text-2xl font-bold text-white mb-6">Key Milestones</div>
             <ul className="space-y-5">
-              {milestones.map((m, i) => (
+              {milestones.map((m: Milestone) => (
                 <li key={m.year} className="flex items-start gap-4">
                   <span className={`mt-1 w-4 h-4 ${m.color} inline-block skew-x-[-20deg] rounded-sm`} />
                   <div>
@@ -74,4 +80,4 @@ const OurJourneySection = () => {
   );
 };
 
-export default OurJourneySection; 
+export default OurJourneySection;

@@ -14,10 +14,10 @@ export default function ExpertiseSection() {
         {/* Heading and Subtext */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4 px-4 sm:px-0">
           <h2 className="text-[#00012E] text-2xl sm:text-3xl md:text-5xl font-bold leading-none max-w-2xl">
-            Here's how we help you<br />move forward.
+            Here&apos;s how we help you<br />move forward.
           </h2>
           <p className="text-[#00012E] text-base sm:text-lg max-w-md md:text-right">
-            We offer expert help for your funds, future, and growth — wherever you're headed next.
+            We offer expert help for your funds, future, and growth — wherever you&apos;re headed next.
           </p>
         </div>
         {/* Cards */}

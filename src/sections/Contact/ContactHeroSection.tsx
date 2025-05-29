@@ -10,10 +10,10 @@ const ContactHeroSection = () => {
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
             Here to simplify<br />
             the complex.<br />
-            <span className="italic text-white/90">Let's talk</span>
+            <span className="italic text-white/90">Let&apos;s talk</span>
           </h1>
           <p className="text-lg md:text-base font-normal text-white/90">
-            Our team is committed to making life simpler for our clients, offering responsive support, expert guidance, and solutions tailored to your needs. Reach out today, let's take the next step together.
+            Our team is committed to making life simpler for our clients, offering responsive support, expert guidance, and solutions tailored to your needs. Reach out today, let&apos;s take the next step together.
           </p>
         </div>
       </div>
@@ -63,7 +63,7 @@ const ContactHeroSection = () => {
           </div>
           <div className="flex items-start mb-6">
             <input type="checkbox" className="mt-1 mr-2" required />
-            <span className="text-xs text-gray-700">By clicking submit, I consent to RF Trust collecting the personal details outlined above and have read and understood <a href="#" className="underline text-blue-600">RF Trust's Privacy Notice</a></span>
+            <span className="text-xs text-gray-700">By clicking submit, I consent to RF Trust collecting the personal details outlined above and have read and understood <a href="#" className="underline text-blue-600">RF Trust&apos;s Privacy Notice</a></span>
           </div>
           <button type="submit" className="w-full bg-[#338DF3] text-white font-semibold py-3 rounded hover:bg-[#2563EB] transition">Submit</button>
         </form>

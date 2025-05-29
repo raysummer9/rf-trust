@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function ContactCtaSection() {
   return (
@@ -7,10 +8,10 @@ export default function ContactCtaSection() {
         {/* Left: Text Content */}
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Let's build your success together.
+            Let&apos;s build your success together.
           </h2>
           <p className="text-lg text-white mb-8 max-w-xl">
-            Partner with a trusted global provider who puts your needs at the center of everything we do. Let's talk about how we can support your goals and build a lasting, successful partnership
+            Partner with a trusted global provider who puts your needs at the center of everything we do. Let&apos;s talk about how we can support your goals and build a lasting, successful partnership
           </p>
           <a
             href="/contact"
@@ -22,9 +23,11 @@ export default function ContactCtaSection() {
         {/* Right: Image */}
         <div className="flex justify-center md:justify-end items-end h-full">
           <div className="bg-white rounded-tr-[120px] overflow-hidden w-[420px] h-[420px] flex items-end justify-center p-0 m-0">
-            <img
+            <Image
               src="/img/contact.png"
               alt="Contact support"
+              width={420}
+              height={420}
               className="w-full h-full object-cover align-bottom"
             />
           </div>

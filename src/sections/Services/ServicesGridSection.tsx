@@ -7,7 +7,7 @@ const services = [
     bg: 'bg-white',
     border: 'border border-[#E5E7EB]',
     rounded: '',
-    text: "We help private equity, venture capital, and real estate funds run smoothly — so you can stay focused on what matters. Our expert team provides end-to-end fund administration, including investor onboarding, regulatory reporting, accounting, and compliance. Whether you're launching a new fund or managing a complex portfolio, we tailor our services to your structure and strategy. With global reach and local expertise, we ensure seamless coordination across jurisdictions — giving fund managers the confidence to scale, adapt, and succeed."
+    text: "We help private equity, venture capital, and real estate funds run smoothly — so you can stay focused on what matters. Our expert team provides end-to-end fund administration, including investor onboarding, regulatory reporting, accounting, and compliance. Whether you&apos;re launching a new fund or managing a complex portfolio, we tailor our services to your structure and strategy. With global reach and local expertise, we ensure seamless coordination across jurisdictions — giving fund managers the confidence to scale, adapt, and succeed."
   },
   {
     title: 'Private Services',
@@ -15,7 +15,7 @@ const services = [
     bg: 'bg-[#EAF2FC]',
     border: '',
     rounded: 'rounded-tr-[64px]',
-    text: "We provide tailored fiduciary solutions to help families and entrepreneurs protect, manage, and grow their wealth across generations. Whether you're planning for the future, preserving a legacy, or navigating complex family or business structures, our team offers bespoke trust and estate services built around your unique needs. From succession planning to asset protection and governance, we work closely with you and your advisers to provide clarity, security, and peace of mind — now and for years to come."
+    text: "We provide tailored fiduciary solutions to help families and entrepreneurs protect, manage, and grow their wealth across generations. Whether you&apos;re planning for the future, preserving a legacy, or navigating complex family or business structures, our team offers bespoke trust and estate services built around your unique needs. From succession planning to asset protection and governance, we work closely with you and your advisers to provide clarity, security, and peace of mind — now and for years to come."
   },
   {
     title: 'Corporate Services',
@@ -23,7 +23,7 @@ const services = [
     bg: 'bg-[#EAF2FC]',
     border: '',
     rounded: 'rounded-tl-[64px]',
-    text: "From company formation to regulatory compliance, we help businesses stay structured, scalable, and globally aligned. Whether you're launching a new venture or expanding across borders, we simplify the complexities of running a business internationally. Our team supports you with everything from directorships and registered offices to governance, reporting, and ongoing compliance — all with a proactive, detail-driven approach that keeps your operations running smoothly. We don't just tick boxes; we help you build a solid foundation for sustainable growth."
+    text: "From company formation to regulatory compliance, we help businesses stay structured, scalable, and globally aligned. Whether you&apos;re launching a new venture or expanding across borders, we simplify the complexities of running a business internationally. Our team supports you with everything from directorships and registered offices to governance, reporting, and ongoing compliance — all with a proactive, detail-driven approach that keeps your operations running smoothly. We don&apos;t just tick boxes; we help you build a solid foundation for sustainable growth."
   },
   {
     title: 'Marine & Aviation Trust',
@@ -31,7 +31,7 @@ const services = [
     bg: 'bg-white',
     border: 'border border-[#E5E7EB]',
     rounded: '',
-    text: "Our experienced team helps you navigate the complexities of international registration and compliance — so you can enjoy peace of mind, wherever you are in the world. From superyachts and cargo vessels to private jets and aircraft fleets, we create tailored trust structures that support safe, compliant, and tax-efficient ownership. We handle the paperwork, legalities, and logistics behind the scenes — so whether you're setting sail or taking flight, your assets are protected, and your journey is stress-free."
+    text: "Our experienced team helps you navigate the complexities of international registration and compliance — so you can enjoy peace of mind, wherever you are in the world. From superyachts and cargo vessels to private jets and aircraft fleets, we create tailored trust structures that support safe, compliant, and tax-efficient ownership. We handle the paperwork, legalities, and logistics behind the scenes — so whether you&apos;re setting sail or taking flight, your assets are protected, and your journey is stress-free."
   },
 ];
 
