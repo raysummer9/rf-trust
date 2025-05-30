@@ -41,7 +41,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto w-full py-[30px] px-8 flex items-center">
         {/* Mobile: Logo and Hamburger on same row */}
         <div className="flex w-full items-center justify-between md:hidden">
-          <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={40} height={15} priority />
+          <Link href="/">
+            <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={40} height={15} priority />
+          </Link>
           <button
             className={`inline-flex items-center justify-center p-2 rounded ${scrolled ? "text-white" : "text-black"} hover:bg-gray-100 focus:outline-none`}
             onClick={() => setMobileMenuOpen(true)}
@@ -52,7 +54,9 @@ export default function Navbar() {
         </div>
         {/* Desktop: Logo, Nav, Button */}
         <div className="flex-shrink-0 hidden md:block">
-          <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={60} height={23} priority />
+          <Link href="/">
+            <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={60} height={23} priority />
+          </Link>
         </div>
         <div className="hidden md:flex flex-1 justify-center flex-wrap items-center gap-2">
           <Menu as="div" className="relative inline-block text-left">
@@ -179,7 +183,9 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 bg-black/40" aria-hidden="true" />
         <Dialog.Panel className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-50 flex flex-col p-6">
           <div className="flex items-center justify-between mb-8">
-            <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={35} height={13} priority />
+            <Link href="/">
+              <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={35} height={13} priority />
+            </Link>
             <button onClick={() => setMobileMenuOpen(false)} aria-label="Close menu">
               <XMarkIcon className="h-7 w-7 text-black" />
             </button>
