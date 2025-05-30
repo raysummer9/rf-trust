@@ -47,7 +47,6 @@ const ContactHeroSection = () => {
     setSubmitStatus('idle');
 
     try {
-      // Replace with your actual API endpoint
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -101,7 +100,7 @@ const ContactHeroSection = () => {
             <span className="italic text-white/90">Let&apos;s talk</span>
           </h1>
           <p className="text-lg md:text-base font-normal text-white/90">
-            Our team is committed to making life simpler for our clients, offering responsive support, expert guidance, and solutions tailored to your needs. Reach out today, let&apos;s take the next step together.
+            Our team is committed to making life simpler for our clients, offering responsive support, expert guidance, and solutions tailored to your needs. Reach out today, let's take the next step together.
           </p>
           <div className="mt-8 space-y-4">
             <div className="flex items-start">
