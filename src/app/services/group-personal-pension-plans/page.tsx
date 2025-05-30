@@ -49,7 +49,7 @@ export default function PensionPlansPage() {
             <b>Can I rely solely on my National Insurance as retirement income?</b> Your National Insurance pension income will likely only meet a small portion of your retirement requirements. Your employer and/or personal pension investments will likely form the core of your retirement assets. The bottom line is that if you want to maintain your lifestyle at retirement, you will need to take matters into your own hands.
           </li>
           <li>
-            <b>How soon should I start saving for retirement?</b> Believe it or not, the early bird really does catch the worm. The earlier you can contribute savings towards your retirement, the more time they will have to grow. Time can be your biggest ally in retirement planning. An extra 1% can be the difference between retiring on your terms or someone else's.
+            <b>How soon should I start saving for retirement?</b> Believe it or not, the early bird really does catch the worm. The earlier you can contribute savings towards your retirement, the more time they will have to grow. Time can be your biggest ally in retirement planning. An extra 1% can be the difference between retiring on your terms or someone else&apos;s.
           </li>
         </ul>
         <div className="font-bold text-lg mb-2 text-[#0A0C2C]">By the Numbers</div>

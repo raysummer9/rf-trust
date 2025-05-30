@@ -63,7 +63,7 @@ export default function MutualFundsPage() {
             </div>
             <div className="font-bold text-xl mb-2 text-[#0A0C2C]">RF Mutual Funds</div>
             <div className="text-[#181A2A] text-base">
-              Offering more mutual funds than any other company in The Bahamas, RF Mutual Funds are designed to match any investor's risk tolerance. We offer low, medium and high-risk investment options and the flexibility for investors to scale up or down based on their specific investment goals. Our experienced Investment Specialists provide expert management of a diversified portfolio as part of a strategic investment plan. We also offer competitive fees and an 'easy pay' option for subscriptions.
+              Offering more mutual funds than any other company in The Bahamas, RF Mutual Funds are designed to match any investor&apos;s risk tolerance. We offer low, medium and high-risk investment options and the flexibility for investors to scale up or down based on their specific investment goals. Our experienced Investment Specialists provide expert management of a diversified portfolio as part of a strategic investment plan. We also offer competitive fees and an &apos;easy pay&apos; option for subscriptions.
             </div>
           </div>
           {/* Card 4: Suitability Note */}
@@ -73,7 +73,7 @@ export default function MutualFundsPage() {
             </div>
             <div className="font-bold text-xl mb-2 text-[#0A0C2C]">Is a mutual fund right for you?</div>
             <div className="text-[#181A2A] text-base">
-          Mutual funds are designed to fund long-term financial goals like saving for a child's college education or retirement. They may not be right for you if you will need your funds within five years. They may also not be right for you if you do not wish to take on any investment risk, or if you are unwilling or unable to withstand fluctuations in the value of your portfolio.
+          Mutual funds are designed to fund long-term financial goals like saving for a child&apos;s college education or retirement. They may not be right for you if you will need your funds within five years. They may also not be right for you if you do not wish to take on any investment risk, or if you are unwilling or unable to withstand fluctuations in the value of your portfolio.
             </div>
           </div>
         </div>

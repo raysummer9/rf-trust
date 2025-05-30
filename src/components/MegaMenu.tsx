@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaVideo, FaFileAlt, FaDownload, FaLink } from "react-icons/fa";
 import Image from "next/image";
 
 const categories = [
@@ -52,13 +51,6 @@ const categories = [
     subItems: [],
     link: "/services/credit-card",
   },
-];
-
-const quickLinks = [
-  { icon: <FaVideo />, label: "More Videos", href: "#" },
-  { icon: <FaFileAlt />, label: "View All Documents", href: "#" },
-  { icon: <FaDownload />, label: "Download Forms", href: "#" },
-  { icon: <FaLink />, label: "Links", href: "#" },
 ];
 
 const MegaMenu = () => {
@@ -184,7 +176,7 @@ const MegaMenu = () => {
           ) : categories[activeIndex].name === "Educational Investment Account" ? (
             <>
               <div className="text-[#181A2A] text-base mb-6">
-                As soon as your child is born, you begin imagining what his or her future will hold. You await the first word, watch for the first step, and try to envision what they will grow up to be. Whatever that is, it's likely to require a college degree. So as your child takes the first steps toward the future, it's important that you take the first steps toward seeing that a college education will be a part of it.
+                As soon as your child is born, you begin imagining what his or her future will hold. You await the first word, watch for the first step, and try to envision what they will grow up to be. Whatever that is, it&apos;s likely to require a college degree. So as your child takes the first steps toward the future, it&apos;s important that you take the first steps toward seeing that a college education will be a part of it.
               </div>
               <ul className="pl-0 mb-6 space-y-3">
                 {categories[activeIndex].subItems.map((item) => (

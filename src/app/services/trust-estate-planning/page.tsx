@@ -36,7 +36,7 @@ export default function TrustEstatePlanningPage() {
       {/* Main Content Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-8 md:px-16 lg:px-0 mt-16 z-10 relative">
         <div className="font-bold text-xl mb-2 text-[#0A0C2C]">As a premier trust company in the region, our estate and trust professionals can provide personalized solutions that will help you preserve the wealth you have worked so hard to accumulate and transfer that wealth to future generations. Our goal is simple - we endeavour to make the estate settlement process as easy as possible for those friends and loved ones left behind. We achieve this through our years of experience as well as through a healthy balance of empathy and professionalism.</div>
-        <div className="font-bold text-lg mb-2 text-[#0A0C2C]">RF's Estate & Trust Solutions:</div>
+        <div className="font-bold text-lg mb-2 text-[#0A0C2C]">RF&apos;s Estate & Trust Solutions:</div>
         <ul className="list-disc pl-8 mb-8 text-lg text-[#181A2A] space-y-2">
           <li>Executorship services</li>
           <li>Estate settlement</li>

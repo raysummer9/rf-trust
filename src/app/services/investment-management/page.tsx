@@ -93,7 +93,7 @@ function Accordion() {
       content: (
         <>
           <div className="mb-4">
-            From setting goals to selecting investments and fine-tuning strategies, RF's investment team helps you maximize the available opportunities and minimize the investment risks by providing you with:
+            From setting goals to selecting investments and fine-tuning strategies, RF&apos;s investment team helps you maximize the available opportunities and minimize the investment risks by providing you with:
           </div>
           <ul className="list-disc pl-8 mb-4 text-lg text-[#181A2A] space-y-2">
             <li>Guidance in evaluating and selecting investment options;</li>

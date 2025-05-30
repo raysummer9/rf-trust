@@ -3,18 +3,12 @@ import React, { useState } from 'react';
 
 const ContactHeroSection = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    companyName: '',
-    jobTitle: '',
+    name: '',
     email: '',
     phone: '',
-    city: '',
-    country: '',
     message: '',
     consent: false
   });
-
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -22,16 +16,14 @@ const ContactHeroSection = () => {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
     
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-    if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
-    if (!formData.city.trim()) newErrors.city = 'City is required';
-    if (!formData.country.trim()) newErrors.country = 'Country is required';
+    if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
+    if (!formData.message.trim()) newErrors.message = 'Message is required';
     if (!formData.consent) newErrors.consent = 'Please consent to the privacy notice';
 
     setErrors(newErrors);
@@ -59,19 +51,17 @@ const ContactHeroSection = () => {
 
       setSubmitStatus('success');
       setFormData({
-        firstName: '',
-        lastName: '',
-        companyName: '',
-        jobTitle: '',
+        name: '',
         email: '',
         phone: '',
-        city: '',
-        country: '',
         message: '',
         consent: false
       });
+      setErrors({});
     } catch (error) {
       setSubmitStatus('error');
+      setErrors({ submit: 'Failed to submit form. Please try again.' });
+      console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -83,10 +73,6 @@ const ContactHeroSection = () => {
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
     }));
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
   };
 
   return (
@@ -100,7 +86,7 @@ const ContactHeroSection = () => {
             <span className="italic text-white/90">Let&apos;s talk</span>
           </h1>
           <p className="text-lg md:text-base font-normal text-white/90">
-            Our team is committed to making life simpler for our clients, offering responsive support, expert guidance, and solutions tailored to your needs. Reach out today, let's take the next step together.
+            Our team is committed to making life simpler for our clients, offering responsive support, expert guidance, and solutions tailored to your needs. Reach out today, let&apos;s take the next step together.
           </p>
           <div className="mt-8 space-y-4">
             <div className="flex items-start">
@@ -151,54 +137,17 @@ const ContactHeroSection = () => {
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-800">First name *</label>
+              <label className="block text-sm font-medium mb-1 text-gray-800">Name *</label>
               <input
                 type="text"
-                name="firstName"
-                value={formData.firstName}
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
-                className={`w-full border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
-                placeholder="Enter your first name"
+                className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
+                placeholder="Enter your name"
                 required
               />
-              {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-800">Last name *</label>
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                className={`w-full border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
-                placeholder="Enter your last name"
-                required
-              />
-              {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-800">Company Name *</label>
-              <input
-                type="text"
-                name="companyName"
-                value={formData.companyName}
-                onChange={handleChange}
-                className={`w-full border ${errors.companyName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
-                placeholder="Enter your company name"
-                required
-              />
-              {errors.companyName && <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>}
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-800">Job Title</label>
-              <input
-                type="text"
-                name="jobTitle"
-                value={formData.jobTitle}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-400 text-gray-900"
-                placeholder="Enter your job title"
-              />
+              {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
             </div>
             <div>
               <label className="block text-sm font-medium mb-1 text-gray-800">Email *</label>
@@ -214,52 +163,30 @@ const ContactHeroSection = () => {
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-800">Phone</label>
+              <label className="block text-sm font-medium mb-1 text-gray-800">Phone *</label>
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-400 text-gray-900"
+                className={`w-full border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
                 placeholder="Enter your phone number"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-800">City *</label>
-              <input
-                type="text"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                className={`w-full border ${errors.city ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
-                placeholder="Enter your city"
                 required
               />
-              {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-800">Country *</label>
-              <input
-                type="text"
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                className={`w-full border ${errors.country ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
-                placeholder="Enter your country"
-                required
-              />
-              {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
+              {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
             </div>
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-1 text-gray-800">Message</label>
+            <label className="block text-sm font-medium mb-1 text-gray-800">Message *</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded px-3 py-2 min-h-[80px] placeholder-gray-400 text-gray-900"
+              className={`w-full border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 min-h-[80px] placeholder-gray-400 text-gray-900`}
               placeholder="Enter your message"
+              required
             />
+            {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
           </div>
           <div className="text-xs text-gray-600 mb-2">
             We use this form to contact you. See our Privacy Notice to learn how we handle your data.

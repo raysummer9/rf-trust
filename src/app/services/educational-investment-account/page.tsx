@@ -21,14 +21,14 @@ export default function EducationalInvestmentAccountPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-8 md:px-16 lg:px-0 mt-16 z-10 relative">
         <div className="font-bold text-xl mb-2 text-[#0A0C2C]">Preparing for the future starts now!</div>
         <div className="text-lg text-[#181A2A] mb-8">
-          Whatever the future holds for your child, you want to make sure you are prepared for it. With the rising costs of college tuition, it is important to come up with a financial plan early. The most cost-effective way to pay for college is to plan in advance and save diligently. In reality, many families get behind schedule and don't begin saving in earnest until college is right around the corner. With an RF Education Investment Account, you can not only develop a strategy towards covering your child's future educational costs, but you can invest those savings to earn higher returns, giving you both a better chance of meeting your goals.
+          Whatever the future holds for your child, you want to make sure you are prepared for it. With the rising costs of college tuition, it is important to come up with a financial plan early. The most cost-effective way to pay for college is to plan in advance and save diligently. In reality, many families get behind schedule and don&apos;t begin saving in earnest until college is right around the corner. With an RF Education Investment Account, you can not only develop a strategy towards covering your child&apos;s future educational costs, but you can invest those savings to earn higher returns, giving you both a better chance of meeting your goals.
         </div>
         <div className="text-lg text-[#181A2A] mb-8">
           The RF Educational Investment Account (EIA) is a flexible and effective way to prepare for future educational costs. The EIA provides access to our family of mutual funds and allows the flexibility to invest according to your personal investment risk preferences, all through a single account.
         </div>
         <div className="font-bold text-xl mb-2 text-[#0A0C2C]">How Much Can I Save?</div>
         <div className="text-lg text-[#181A2A] mb-8">
-          Although saving for college might feel unattainable, it's far more possible when time is on your side. That's why starting early is so important - half of your savings years will have passed by the time your child is in the second grade. When you start early, you can take advantage of the power of compounding. A compounding effect occurs when any accrued interest or earnings collects additional interest or earnings. The earlier you start, the more opportunity your money has to grow.
+          Although saving for college might feel unattainable, it&apos;s far more possible when time is on your side. That&apos;s why starting early is so important - half of your savings years will have passed by the time your child is in the second grade. When you start early, you can take advantage of the power of compounding. A compounding effect occurs when any accrued interest or earnings collects additional interest or earnings. The earlier you start, the more opportunity your money has to grow.
         </div>
         <div className="text-lg text-[#181A2A] mb-8">
           The amount will be different for each investor, depending on the amount of time until enrollment, private or public school, as well as any supplemental assistance, afforded. One thing is certain, it will cost more for an education tomorrow than it does today.
@@ -36,7 +36,7 @@ export default function EducationalInvestmentAccountPage() {
         <div className="font-bold text-xl mb-2 text-[#0A0C2C]">What Makes the RF EIA Different?</div>
         <div className="font-bold text-lg mb-2 text-[#0A0C2C]">Flexibility</div>
         <div className="text-lg text-[#181A2A] mb-8">
-          It takes a village to raise a child, and paying for college is no different. With an RF Education Investment Account, anyone can invest on behalf of your child. That means parents, grandparents, aunts, uncles, and friends can all contribute to your child's academic future with no deposit limits for contributors.
+          It takes a village to raise a child, and paying for college is no different. With an RF Education Investment Account, anyone can invest on behalf of your child. That means parents, grandparents, aunts, uncles, and friends can all contribute to your child&apos;s academic future with no deposit limits for contributors.
         </div>
         <div className="font-bold text-lg mb-2 text-[#0A0C2C]">Multiple Investment Options</div>
         <div className="text-lg text-[#181A2A] mb-8">
