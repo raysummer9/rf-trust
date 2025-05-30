@@ -1,15 +1,18 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Dialog, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
+import MegaMenu from "@/components/MegaMenu";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const megaMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +22,27 @@ export default function Navbar() {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mega menu on outside click
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        megaMenuRef.current &&
+        !megaMenuRef.current.contains(event.target as Node) &&
+        !(event.target as HTMLElement).closest("#services-menu-btn")
+      ) {
+        setMegaMenuOpen(false);
+      }
+    }
+    if (megaMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [megaMenuOpen]);
 
   // Handler for Executive Members link
   const handleExecMembersClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -92,35 +116,29 @@ export default function Navbar() {
             </Menu.Items>
           </Menu>
           {/* SERVICES menu */}
-          <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className={`flex items-center text-sm font-normal tracking-wide px-4 py-2 rounded transition focus:outline-none ${scrolled ? "text-white hover:text-blue-200" : "text-black hover:text-blue-700"}`}>
-              SERVICES <ChevronDownIcon className="ml-1 h-4 w-4" />
-            </Menu.Button>
-            <Menu.Items className="absolute left-0 mt-2 w-56 origin-top-left bg-white border border-gray-200 rounded shadow-lg focus:outline-none z-50">
-              <div className="py-1">
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link href="/services" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>Our Services</Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link href="/services#services-grid" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>Fund Services</Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link href="/services#services-grid" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>Private Client Services</Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link href="/services#services-grid" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>Additional Services</Link>
-                  )}
-                </Menu.Item>
-              </div>
-            </Menu.Items>
-          </Menu>
+          <li className="relative group hidden md:block">
+            <button
+              id="services-menu-btn"
+              type="button"
+              className={`flex items-center text-sm font-normal tracking-wide px-4 py-2 rounded transition focus:outline-none ${scrolled ? "text-white hover:text-blue-200" : "text-black hover:text-blue-700"}`}
+              onClick={() => setMegaMenuOpen((open) => !open)}
+              tabIndex={0}
+              aria-haspopup="true"
+              aria-expanded={megaMenuOpen}
+            >
+              SERVICES
+              <svg className={`ml-1 w-4 h-4 transition-transform ${megaMenuOpen ? "rotate-180" : "rotate-0"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {/* MegaMenu: Desktop only */}
+            <div
+              ref={megaMenuRef}
+              className={`fixed left-0 top-[90px] w-full z-50 ${megaMenuOpen ? "block" : "hidden"}`}
+            >
+              <MegaMenu />
+            </div>
+          </li>
           {/* ACCOUNTS menu */}
           <Link
             href="/services#accounts"
@@ -144,22 +162,7 @@ export default function Navbar() {
               <div className="py-1">
                 <Menu.Item>
                   {({ active }) => (
-                    <Link href="#insights" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>Insights</Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link href="#brochures-factsheets" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>Brochures & Factsheets</Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link href="#awards-accolades" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>Awards & Accolades</Link>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <Link href="#news" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>News and Publication</Link>
+                    <Link href="/resources/faqs" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 ${active ? "bg-blue-50" : ""}`}>FAQs</Link>
                   )}
                 </Menu.Item>
               </div>

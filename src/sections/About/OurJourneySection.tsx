@@ -80,4 +80,4 @@ const OurJourneySection = () => {
   );
 };
 
-export default OurJourneySection;
+export default OurJourneySection; 

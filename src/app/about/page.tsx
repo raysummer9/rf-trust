@@ -1,7 +1,6 @@
 "use client";
 import { AboutHeroSection, CommitmentSection, OurJourneySection, TeamsSection, TridentTouchSection } from '@/sections/About';
 import ContactCtaSection from '@/sections/ContactCtaSection';
-import Footer from '@/components/Footer';
 import { useEffect } from 'react';
 
 export default function AboutPage() {
@@ -22,7 +21,6 @@ export default function AboutPage() {
       <TridentTouchSection />
       <TeamsSection />
       <ContactCtaSection />
-      <Footer />
       {/* Other About sections will go here */}
     </main>
   );

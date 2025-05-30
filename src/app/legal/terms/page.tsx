@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '@/components/Footer';
 
 export default function TermsOfUse() {
   return (
@@ -69,7 +68,6 @@ export default function TermsOfUse() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 } 

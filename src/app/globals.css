@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Make the TradingView ticker tape shorter and contents smaller */
+.tradingview-ticker-custom {
+  height: 32px !important;
+  min-height: 0 !important;
+}
+.tradingview-ticker-custom .tradingview-widget-container,
+.tradingview-ticker-custom iframe {
+  height: 32px !important;
+  min-height: 0 !important;
+}
+.tradingview-ticker-custom .tradingview-widget-container * {
+  font-size: 12px !important;
+}

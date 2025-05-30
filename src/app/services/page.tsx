@@ -1,7 +1,6 @@
 import { ServicesHeroSection, ServicesGridSection, AccountsTabsSection, BeyondBasicsSection, LoansTabsSection } from '@/sections/Services';
 import WhyUsSection from '@/sections/WhyUsSection';
 import ContactCtaSection from '@/sections/ContactCtaSection';
-import Footer from '@/components/Footer';
 
 export default function ServicesPage() {
   return (
@@ -13,7 +12,6 @@ export default function ServicesPage() {
       <WhyUsSection />
       <LoansTabsSection />
       <ContactCtaSection />
-      <Footer />
     </main>
   );
 } 

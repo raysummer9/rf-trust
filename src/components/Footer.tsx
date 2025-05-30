@@ -10,9 +10,6 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 items-start">
           {/* Logo and Slogan */}
           <div className="flex flex-col items-start md:items-start md:col-span-2">
-            <Link href="/">
-              <Image src="/img/rf-logo.png" alt="RF Trust" width={100} height={41} className="mb-8" />
-            </Link>
             <div className="text-3xl md:text-4xl font-bold mb-8 mt-4 leading-tight whitespace-pre-line">TOGETHER WE DELIVER SUCCESS</div>
             <div className="space-y-4 text-white/90">
               <div className="flex items-start">

@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '@/components/Footer';
 
 export default function CookiePolicy() {
   return (
@@ -68,7 +67,6 @@ export default function CookiePolicy() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 } 

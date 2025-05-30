@@ -5,7 +5,6 @@ import ExpertiseSection from "../sections/ExpertiseSection";
 import WhyUsSection from "../sections/WhyUsSection";
 import GlobalPresenceSection from "../sections/GlobalPresenceSection";
 import ContactCtaSection from "../sections/ContactCtaSection";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <WhyUsSection />
       <GlobalPresenceSection />
       <ContactCtaSection />
-      <Footer />
     </>
   );
 }

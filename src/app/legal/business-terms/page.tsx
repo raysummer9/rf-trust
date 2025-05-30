@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '@/components/Footer';
 
 export default function TermsOfBusiness() {
   return (
@@ -76,7 +75,6 @@ export default function TermsOfBusiness() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 } 
