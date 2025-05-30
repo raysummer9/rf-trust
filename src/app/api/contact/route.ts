@@ -6,19 +6,32 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
+    console.log('API route hit - starting request processing');
     const body = await request.json();
+    console.log('Request body received:', JSON.stringify(body));
     
     // Validate required fields
     const requiredFields = ['firstName', 'lastName', 'companyName', 'email', 'city', 'country'];
     const missingFields = requiredFields.filter(field => !body[field]);
     
     if (missingFields.length > 0) {
+      console.log('Missing required fields:', missingFields);
       return NextResponse.json(
         { message: `Missing required fields: ${missingFields.join(', ')}` },
         { status: 400 }
       );
     }
 
+    // Check if Resend API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { message: 'Email service is not properly configured' },
+        { status: 500 }
+      );
+    }
+
+    console.log('Attempting to send email...');
     // Send email using Resend
     const { error } = await resend.emails.send({
       from: 'RF Trust <contact@rf-trust.com>',
@@ -52,7 +65,7 @@ This message was sent from the RF Trust contact form.
         <hr>
         <p><em>This message was sent from the RF Trust contact form.</em></p>
       `,
-      replyTo: body.email // This allows you to reply directly to the person who submitted the form
+      reply_to: body.email
     });
 
     if (error) {
@@ -63,6 +76,7 @@ This message was sent from the RF Trust contact form.
       );
     }
 
+    console.log('Email sent successfully');
     return NextResponse.json(
       { message: 'Form submitted successfully' },
       { status: 200 }
