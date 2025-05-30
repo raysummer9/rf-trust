@@ -103,6 +103,38 @@ const ContactHeroSection = () => {
           <p className="text-lg md:text-base font-normal text-white/90">
             Our team is committed to making life simpler for our clients, offering responsive support, expert guidance, and solutions tailored to your needs. Reach out today, let&apos;s take the next step together.
           </p>
+          <div className="mt-8 space-y-4">
+            <div className="flex items-start">
+              <svg className="w-5 h-5 mt-1 mr-3 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <div className="text-white/90">
+                <p className="font-medium">Address</p>
+                <p className="text-sm">West Wing Trafalgar Court, 4th Floor</p>
+                <p className="text-sm">GY1 3RL, Guernsey</p>
+                <p className="text-sm">Channel Islands</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <svg className="w-5 h-5 mt-1 mr-3 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <div className="text-white/90">
+                <p className="font-medium">Email</p>
+                <p className="text-sm">contact@rf-trust.com</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <svg className="w-5 h-5 mt-1 mr-3 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <div className="text-white/90">
+                <p className="font-medium">Phone</p>
+                <p className="text-sm">+44 (0) 1481 727577</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* Right: Contact Form */}
@@ -126,8 +158,8 @@ const ContactHeroSection = () => {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                className={`w-full border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400`}
-                placeholder="e.g. John"
+                className={`w-full border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
+                placeholder="Enter your first name"
                 required
               />
               {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
@@ -139,8 +171,8 @@ const ContactHeroSection = () => {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                className={`w-full border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400`}
-                placeholder="e.g. Doe"
+                className={`w-full border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
+                placeholder="Enter your last name"
                 required
               />
               {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
@@ -152,8 +184,8 @@ const ContactHeroSection = () => {
                 name="companyName"
                 value={formData.companyName}
                 onChange={handleChange}
-                className={`w-full border ${errors.companyName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400`}
-                placeholder="e.g. Acme Inc"
+                className={`w-full border ${errors.companyName ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
+                placeholder="Enter your company name"
                 required
               />
               {errors.companyName && <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>}
@@ -165,8 +197,8 @@ const ContactHeroSection = () => {
                 name="jobTitle"
                 value={formData.jobTitle}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-400"
-                placeholder="e.g. CEO"
+                className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-400 text-gray-900"
+                placeholder="Enter your job title"
               />
             </div>
             <div>
@@ -176,8 +208,8 @@ const ContactHeroSection = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400`}
-                placeholder="e.g. john@example.com"
+                className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
+                placeholder="Enter your email address"
                 required
               />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -189,8 +221,8 @@ const ContactHeroSection = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-400"
-                placeholder="e.g. +1 234 567 890"
+                className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-400 text-gray-900"
+                placeholder="Enter your phone number"
               />
             </div>
             <div>
@@ -200,8 +232,8 @@ const ContactHeroSection = () => {
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                className={`w-full border ${errors.city ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400`}
-                placeholder="e.g. New York"
+                className={`w-full border ${errors.city ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
+                placeholder="Enter your city"
                 required
               />
               {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
@@ -213,8 +245,8 @@ const ContactHeroSection = () => {
                 name="country"
                 value={formData.country}
                 onChange={handleChange}
-                className={`w-full border ${errors.country ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400`}
-                placeholder="e.g. United States"
+                className={`w-full border ${errors.country ? 'border-red-500' : 'border-gray-300'} rounded px-3 py-2 placeholder-gray-400 text-gray-900`}
+                placeholder="Enter your country"
                 required
               />
               {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
@@ -226,8 +258,8 @@ const ContactHeroSection = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded px-3 py-2 min-h-[80px] placeholder-gray-400"
-              placeholder="How can we help you?"
+              className="w-full border border-gray-300 rounded px-3 py-2 min-h-[80px] placeholder-gray-400 text-gray-900"
+              placeholder="Enter your message"
             />
           </div>
           <div className="text-xs text-gray-600 mb-2">
