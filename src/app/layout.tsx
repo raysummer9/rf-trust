@@ -11,6 +11,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "RF Trust",
   description: "RF Trust - Together We Deliver Success",
+  icons: {
+    icon: '/img/rf-logo-white.png',
+    shortcut: '/img/rf-logo-white.png',
+    apple: '/img/rf-logo-white.png',
+  },
 };
 
 export default function RootLayout({
@@ -20,9 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/img/rf-logo.png" type="image/png" />
-      </head>
       <body className={inter.className}>
         <Navbar />
         {children}

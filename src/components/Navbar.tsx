@@ -66,7 +66,26 @@ export default function Navbar() {
         {/* Mobile: Logo and Hamburger on same row */}
         <div className="flex w-full items-center justify-between md:hidden">
           <Link href="/">
-            <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={40} height={15} priority />
+            <div className="flex items-center gap-2">
+              {scrolled ? (
+                <Image 
+                  src="/img/rf-logo-white.png" 
+                  alt="RF Trust Logo" 
+                  width={40} 
+                  height={15} 
+                  priority 
+                />
+              ) : (
+                <Image 
+                  src="/img/rf-logo.png" 
+                  alt="RF Trust Logo" 
+                  width={40} 
+                  height={15} 
+                  priority 
+                />
+              )}
+              <span className={`text-lg font-semibold ${scrolled ? "text-white" : "text-black"}`}>RF Trust</span>
+            </div>
           </Link>
           <button
             className={`inline-flex items-center justify-center p-2 rounded ${scrolled ? "text-white" : "text-black"} hover:bg-gray-100 focus:outline-none`}
@@ -79,7 +98,26 @@ export default function Navbar() {
         {/* Desktop: Logo, Nav, Button */}
         <div className="flex-shrink-0 hidden md:block">
           <Link href="/">
-            <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={60} height={23} priority />
+            <div className="flex items-center gap-2">
+              {scrolled ? (
+                <Image 
+                  src="/img/rf-logo-white.png" 
+                  alt="RF Trust Logo" 
+                  width={60} 
+                  height={23} 
+                  priority 
+                />
+              ) : (
+                <Image 
+                  src="/img/rf-logo.png" 
+                  alt="RF Trust Logo" 
+                  width={60} 
+                  height={23} 
+                  priority 
+                />
+              )}
+              <span className={`text-xl font-semibold ${scrolled ? "text-white" : "text-black"}`}>RF Trust</span>
+            </div>
           </Link>
         </div>
         <div className="hidden md:flex flex-1 justify-center flex-wrap items-center gap-2">
@@ -187,7 +225,26 @@ export default function Navbar() {
         <Dialog.Panel className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-50 flex flex-col p-6">
           <div className="flex items-center justify-between mb-8">
             <Link href="/">
-              <Image src="/img/rf-logo.png" alt="RF Trust Logo" width={35} height={13} priority />
+              <div className="flex items-center gap-2">
+                {scrolled ? (
+                  <Image 
+                    src="/img/rf-logo-white.png" 
+                    alt="RF Trust Logo" 
+                    width={35} 
+                    height={13} 
+                    priority 
+                  />
+                ) : (
+                  <Image 
+                    src="/img/rf-logo.png" 
+                    alt="RF Trust Logo" 
+                    width={35} 
+                    height={13} 
+                    priority 
+                  />
+                )}
+                <span className="text-lg font-semibold text-black">RF Trust</span>
+              </div>
             </Link>
             <button onClick={() => setMobileMenuOpen(false)} aria-label="Close menu">
               <XMarkIcon className="h-7 w-7 text-black" />

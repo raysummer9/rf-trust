@@ -136,7 +136,7 @@ const ContactHeroSection = () => {
               </svg>
               <div className="text-white/90">
                 <p className="font-medium">Phone</p>
-                <p className="text-sm">+44 (0) 1481 727577</p>
+                <p className="text-sm">---</p>
               </div>
             </div>
           </div>

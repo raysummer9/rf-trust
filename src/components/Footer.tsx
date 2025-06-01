@@ -35,7 +35,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <div>
-                  <p className="text-sm">+44 (0) 1481 727577</p>
+                  <p className="text-sm">---</p>
                 </div>
               </div>
             </div>
@@ -63,8 +63,7 @@ export default function Footer() {
           <div>
             <div className="font-bold text-lg mb-4">CONTACT</div>
             <ul className="space-y-2">
-              <li><Link href="/contact#location" className="hover:text-blue-400 transition">Location</Link></li>
-              <li><Link href="/contact#staff" className="hover:text-blue-400 transition">Staff Directory</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-400 transition">Location</Link></li>
               <li><Link href="/contact" className="hover:text-blue-400 transition">Make an enquiry</Link></li>
               <li><Link href="/careers" className="hover:text-blue-400 transition">Careers</Link></li>
             </ul>
