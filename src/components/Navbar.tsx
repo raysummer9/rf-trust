@@ -84,7 +84,7 @@ export default function Navbar() {
                   priority 
                 />
               )}
-              <span className={`text-lg font-semibold ${scrolled ? "text-white" : "text-black"}`}>RF Trust</span>
+              <span className={`text-2xl font-semibold ${scrolled ? "text-white" : "text-black"}`}>Trust</span>
             </div>
           </Link>
           <button
@@ -116,7 +116,7 @@ export default function Navbar() {
                   priority 
                 />
               )}
-              <span className={`text-xl font-semibold ${scrolled ? "text-white" : "text-black"}`}>RF Trust</span>
+              <span className={`text-2xl font-semibold ${scrolled ? "text-white" : "text-black"}`}>Trust</span>
             </div>
           </Link>
         </div>
@@ -243,7 +243,7 @@ export default function Navbar() {
                     priority 
                   />
                 )}
-                <span className="text-lg font-semibold text-black">RF Trust</span>
+                <span className="text-2xl font-semibold text-black">Trust</span>
               </div>
             </Link>
             <button onClick={() => setMobileMenuOpen(false)} aria-label="Close menu">
